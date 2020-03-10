@@ -145,7 +145,7 @@ public class dlgSecante extends javax.swing.JDialog {
         double error = Double.parseDouble(this.txtError.getText());
         int interacion = Integer.parseInt(this.txtIteraciones.getText());
         
-        CtrlMetodos obj = new CtrlMetodos();
+        ctrlMetodos obj = new ctrlMetodos();
         tblSecante resultados = obj.Secante(xi1, xi, error, interacion);
         this.tblSecante.setModel(resultados);
     }//GEN-LAST:event_btnCalcularActionPerformed
