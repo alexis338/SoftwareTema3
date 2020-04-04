@@ -105,15 +105,19 @@ public class JFRPrincipal extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void JMIJacobiActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_JMIJacobiActionPerformed
-        
+      dlgJacobi vnt = new dlgJacobi(this,true);
+        vnt.setVisible(true);  
     }//GEN-LAST:event_JMIJacobiActionPerformed
 
     private void JMIGaussSeidelActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_JMIGaussSeidelActionPerformed
-        
+        dlgGaussSeidel vtn = new dlgGaussSeidel(this, true);
+        vtn.setVisible(true);
+                              
     }//GEN-LAST:event_JMIGaussSeidelActionPerformed
 
     private void jMPuntoFijoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMPuntoFijoActionPerformed
-        
+        DlgFijo vtn = new DlgFijo(this, true);
+        vtn.setVisible(true);
     }//GEN-LAST:event_jMPuntoFijoActionPerformed
 
     private void jMNewtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMNewtonActionPerformed
