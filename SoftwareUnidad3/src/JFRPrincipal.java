@@ -39,7 +39,7 @@ public class JFRPrincipal extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagen/fondoED.jpg"))); // NOI18N
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagen/fondoMN.jpg"))); // NOI18N
 
         jMenuBar1.setBackground(new java.awt.Color(0, 51, 255));
         jMenuBar1.setForeground(new java.awt.Color(255, 255, 255));
