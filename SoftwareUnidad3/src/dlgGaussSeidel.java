@@ -4,12 +4,11 @@
  * and open the template in the editor.
  */
 
-
 import javax.swing.JOptionPane;
 
 /**
  *
-
+ *
  */
 public class dlgGaussSeidel extends javax.swing.JDialog {
 
@@ -196,32 +195,34 @@ public class dlgGaussSeidel extends javax.swing.JDialog {
 
     private void btnCalcularActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCalcularActionPerformed
         int tm = Integer.parseInt(this.txtTamanio.getText());
-        int iteraciones =  Integer.parseInt(this.NumIteraciones.getText());
+        int iteraciones = Integer.parseInt(this.NumIteraciones.getText());
         int ValorX = Integer.parseInt(this.txtValorx.getText());
         int Valory = Integer.parseInt(this.txtValory.getText());
         int Valorz = Integer.parseInt(this.txtValorz.getText());
 
-        int [][] A = new int[tm][tm];
-        int [] b = new int [3];
+        int[][] A = new int[tm][tm];
+        int[] b = new int[3];
 
-        b [0] = ValorX; b[1] = Valory; b[2] = Valorz;
+        b[0] = ValorX;
+        b[1] = Valory;
+        b[2] = Valorz;
 
         for (int i = 0; i < A.length; i++) {
             for (int j = 0; j < A.length; j++) {
-                A [i][j] = Integer.parseInt(JOptionPane.showInputDialog(null,"Ingrese el valor de la matriz "
-                    + "en la posicion : " + i + " : " + j));
-        }
+                A[i][j] = Integer.parseInt(JOptionPane.showInputDialog(null, "Ingrese el valor de la matriz "
+                        + "en la posicion : " + i + " : " + j));
+            }
         }
 
         CtrlMetodos obj = new CtrlMetodos();
-        tblJacobi resultados= obj.Jacobi(A, b, iteraciones);
+        tblJacobi resultados = obj.Jacobi(A, b, iteraciones);
         this.tblGauss.setModel(resultados);
     }//GEN-LAST:event_btnCalcularActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        JOptionPane.showMessageDialog(null, "1.- La matriz no debe tener elementos nulos.\n" +
-"2.- La matriz tiene que ser dominante. Esto quiere decir que los elementos en la diagonal, deben de contener el mayor coeficiente de la ecuación.\n" +
-"3.- El sistema de ecuaciones debe de ser cuadrado, es decir, el número de ecuaciones es igual al número de incógnitas.");
+        JOptionPane.showMessageDialog(null, "1.- La matriz no debe tener elementos nulos.\n"
+                + "2.- La matriz tiene que ser dominante. Esto quiere decir que los elementos en la diagonal, deben de contener el mayor coeficiente de la ecuación.\n"
+                + "3.- El sistema de ecuaciones debe de ser cuadrado, es decir, el número de ecuaciones es igual al número de incógnitas.");
     }//GEN-LAST:event_jButton1ActionPerformed
 
     /**
